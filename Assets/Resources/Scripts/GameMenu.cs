@@ -109,12 +109,12 @@ public class GameMenu : MonoBehaviour {
     /// <param name="obj">Gameobject that was pressed</param>
     public void SubMenu2(GameObject obj)
     {
+		Debug.Log (obj.name + " 1");
         foreach (Transform item in rightPanel.transform)
-        {
-            if (item.name == obj.name)
-            {
+        {			
+            if (item.gameObject.name == obj.name)
+            {				
                 item.gameObject.SetActive(true);
-
                 // Need to add all cases.
                 switch (item.name)
                 {
